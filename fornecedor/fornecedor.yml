@@ -1,10 +1,14 @@
 spring:
-  datasource:        
+  datasource:
+    url: jdbc:mysql://localhost:3307/fornecedor     
     username: root
     password: root
-    url: jdbc:mysql://localhost:3307/fornecedor     
-  jpa:    
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
     hibernate:
       ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
     
   
